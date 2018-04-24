@@ -2,6 +2,9 @@ Nodejs Server API server 개발 (TDD)
 ==================================
 by SangMin Lee
 
+
+# 필요 모듈 install
+
 1.  npm init (package.json 파일 생성)
 
 2.  npm install express --save
@@ -10,16 +13,19 @@ by SangMin Lee
     
     npm install morgan --save
     
-# 필요 모듈 install
+    
+
+# test에 필요한 module install
 
 3.  npm install mocha --save-dev
 
     npm install should --save-dev
     
     npm install supertest --save-dev
-    
-    
-# test에 필요한 module install
+  
+  
+  
+# test or start 실행 
 
 4.  npm start (or) npm test
     
