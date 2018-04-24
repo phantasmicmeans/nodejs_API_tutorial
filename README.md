@@ -23,11 +23,12 @@ by SangMin Lee
 
 4.  npm start (or) npm test
     
-    #package.json file의 start, test 명세 
-    --> pacakge.json 
-    "scripts": {
-        "start": "node ./index"
-        "test": "mocha ./user.spec.js"
-    }
+    # package.json file의 start, test 명세 
+    
+        --> pacakge.json 
+        "scripts": {
+            "start": "node ./index"
+            "test": "mocha ./user.spec.js"
+         }
     
     
