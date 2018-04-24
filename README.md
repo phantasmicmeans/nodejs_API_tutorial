@@ -29,7 +29,7 @@ by SangMin Lee
 
 4.  npm start (or) npm test
     
-    # package.json file의 start, test 명세 
+    ### package.json file의 start, test 명세 
     
         --> pacakge.json 
         "scripts": {
