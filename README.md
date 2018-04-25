@@ -143,3 +143,5 @@ Nodejs API Server with Express
 
 Test가 성공적으로 완료된 모습을 볼 수 있다. 
 
+### 다음 단계에서는 {Projectfolder}/index.js에 구현되어있는 API들을 분리한다. ###
+> - nodejs_API_tutorial 2 => https://github.com/phantasmicmeans/nodejs_API_tutorial2
