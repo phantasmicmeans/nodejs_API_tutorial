@@ -1,8 +1,10 @@
 Nodejs Server API server 개발 1
 ==================================
 
-![nodejs](https://user-images.githubusercontent.com/20153890/39241189-ff9f30f6-48c0-11e8-9c30-a27a1743d2b8.png)
+![nodejs](https://user-images.githubusercontent.com/20153890/39241370-a04076fa-48c1-11e8-950b-614b63faae03.png)
+
 Official Nodejs logo from nodejs.org
+
 
 ## TDD ##
 T Academy Node.JS 기반의 REST API Server개발에 대한 세미나를 듣고 따로 정리를 해보려 한다.
@@ -43,7 +45,8 @@ Nodejs API Server with Express
 
 
 **{Projectfolder}/user.spec.js 일부**
-
+    
+```javascript
     const assert = require('assert')
     const should = require('should')
     const request = require('supertest')
@@ -81,7 +84,7 @@ Nodejs API Server with Express
             })
         })
     })
-
+```
 
 
 
@@ -91,6 +94,7 @@ Nodejs API Server with Express
 
 **{Projectfolder}/index.js 일부**
 
+```javascript
     const express = require('express')
     const logger = require('morgan')
     const bodyParser = require('body-parser')
@@ -113,7 +117,7 @@ Nodejs API Server with Express
             res.json(users.slice(0, limit));
         }
     })
-
+```
    
 
 
@@ -122,10 +126,12 @@ Nodejs API Server with Express
 
 **{Projectfolder}/package.json, "scripts"**   
 
+```javascript
     "scripts": {
         "start": "node index",
         "test": "mocha ./user.spec.js"
     }
+```
 
 **npm test 실행**
 
