@@ -1,6 +1,7 @@
-TDD, Nodejs Server API server 개발 1
+Nodejs Server API server 개발 1
 ==================================
 
+Official Nodejs logo from nodejs.org
 ## TDD ##
 T Academy Node.JS 기반의 REST API Server개발에 대한 세미나를 듣고 따로 정리를 해보려 한다.
 여기서는 TDD 방법론을 이용한 간단한 NodeJS API Server를 구현한다. 
