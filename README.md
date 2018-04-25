@@ -3,6 +3,7 @@ TDD, Nodejs Server API server 개발1
 Author : SangMin LEE
 
 ## TDD ##
+T Academy Node.JS 기반의 REST API Server개발에 대한 세미나를 듣고 따로 정리를 해보려 한다.
 여기서는 TDD 방법론을 이용한 간단한 NodeJS API Server를 구현한다. 
 각 기능을 테스트 가능한 단위로 쪼개고, 이 테스트를 통과하는 조건으로 API Server를 구현한다.
 
@@ -10,7 +11,7 @@ Author : SangMin LEE
 > 2. 함수 로직을 만든다.
 > 3. 테스트에 성공한다.
 
-Node.JS에서 TDD 방법론을 이용한 개발을 위해 Mocha, should, superTest 모듈을 사용한다.
+TDD 방법론을 이용한 개발을 위해 Mocha, should, superTest 모듈을 사용한다.
 
 Nodejs API Server with Express
 ------------------------------
@@ -30,13 +31,60 @@ Nodejs API Server with Express
 > -     $npm install morgan --save
 
 >**test module install** 
-> -     $npm install mocha --save-dev (Unit Test를 진행하기 위한 Test Framework)
-> -     $npm install should --save-dev (검증 라이브러리)
+> -     $npm install mocha --save-dev (Unit Test를 진행하기 위한 Test Framework)
+> -     $npm install should --save-dev (검증 라이브러리)
 > -     $npm install supertest --save-dev
 
-### Index.js ###
+    
+### Test Unit을 만든다 ###
+
+**{Projectfolder}/user.spec.js 일부 **
+
+    const assert = require('assert')
+    const should = require('should')
+    const request = require('supertest')
+    const app = require('./index')
+
+    describe('GET /users', () => {
+        describe('성공', () => {
+            it('배열을 반환한다', (done) => {
+            request(app)
+                .get('/users')
+                .end((err,res) => {
+                res.body.should.be.instanceof(Array)
+                res.body.forEach(user => {
+                    user.should.have.property('name')
+                })
+                done()
+                })
+            })
+            it('최대 limit 갯수만큼 응답한다', done => {
+                request(app)
+                .get('/users?limit=2')
+                .end((err,res) => {
+                    res.body.should.have.lengthOf(2)
+                    done()
+                })
+            })
+        })
+
+        describe('실패', () => {
+            it('limit이 정수가 아니면 400을 응답한다', done => {
+            request(app)
+                .get('/users?limit=two')
+                .expect(400)
+                .end(done)
+            })
+        })
+    })
+
+
+> -     $npm test
+
+
+### 함수 로직을 만든다 ###
 >
-**{Projectfolder}/index.js**
+**{Projectfolder}/index.js 일부**
 
     const express = require('express')
     const logger = require('morgan')
@@ -78,19 +126,12 @@ Nodejs API Server with Express
         res.json(user)
     })
 
+### Test에 성공한다. ###
+### Package.json Script ###
 
-## Mocha Test ##
-
-Mocha는 Node.JS의 Test Frameworkd이다. 
-> - **npm start or npm test**
-> -     $npm start (or) npm test
-
-## Package.json Script ##
-
-**{Projectfolder}/package.json**   
+**{Projectfolder}/package.json**   
 
     "scripts": {
         "start": "node bin/www.js"
         "test": "NODE_ENV=test mocha api/user/user.spec.js -w"
     }
-
