@@ -36,9 +36,11 @@ Nodejs API Server with Express
 > -     $npm install supertest --save-dev
 
     
-### Test Unit을 만든다 ###
+    
+### 1. Test Unit을 만든다 ###
 
-**{Projectfolder}/user.spec.js 일부 **
+
+**{Projectfolder}/user.spec.js 일부**
 
     const assert = require('assert')
     const should = require('should')
@@ -79,11 +81,12 @@ Nodejs API Server with Express
     })
 
 
-> -     $npm test
 
 
-### 함수 로직을 만든다 ###
->
+
+### 2. 함수 로직을 만든다 ###
+
+
 **{Projectfolder}/index.js 일부**
 
     const express = require('express')
@@ -126,12 +129,24 @@ Nodejs API Server with Express
         res.json(user)
     })
 
-### Test에 성공한다. ###
-### Package.json Script ###
 
-**{Projectfolder}/package.json**   
+### 3. Test에 성공한다. ###
+
+
+**{Projectfolder}/package.json, "scripts"**   
 
     "scripts": {
         "start": "node bin/www.js"
         "test": "NODE_ENV=test mocha api/user/user.spec.js -w"
     }
+
+**npm test 실행**
+
+> -     $npm test
+
+
+![test](https://user-images.githubusercontent.com/20153890/39226762-562e2148-488f-11e8-91ea-09171897aa70.PNG)
+
+
+Test가 성공적으로 완료된 모습을 볼 수 있다. 
+
