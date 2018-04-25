@@ -1,6 +1,5 @@
 TDD, Nodejs Server API server 개발 1
 ==================================
-Author : SangMin LEE
 
 ## TDD ##
 T Academy Node.JS 기반의 REST API Server개발에 대한 세미나를 듣고 따로 정리를 해보려 한다.
@@ -121,8 +120,8 @@ Nodejs API Server with Express
 **{Projectfolder}/package.json, "scripts"**   
 
     "scripts": {
-        "start": "node bin/www.js"
-        "test": "NODE_ENV=test mocha api/user/user.spec.js -w"
+        "start": "node index",
+        "test": "mocha ./user.spec.js"
     }
 
 **npm test 실행**
