@@ -29,7 +29,7 @@ Nodejs API Server with Express
 > -     $npm install body-parser --save
 > -     $npm install morgan --save
 
-> - **test module install** 
+>**test module install** 
 > -     $npm install mocha --save-dev (Unit Test를 진행하기 위한 Test Framework)
 > -     $npm install should --save-dev (검증 라이브러리)
 > -     $npm install supertest --save-dev
