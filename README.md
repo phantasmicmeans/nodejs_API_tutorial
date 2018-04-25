@@ -23,9 +23,8 @@ Nodejs API Server with Express
 ### npm install ###
 
 >
-> - **necessary module install**
->
-> -     $npm init
+>**necessary module install** 
+> -     $npm init
 > -     $npm install express --save
 > -     $npm install body-parser --save
 > -     $npm install morgan --save
