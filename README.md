@@ -4,7 +4,15 @@ Nodejs Server API server 개발 1
 ![nodejs](https://user-images.githubusercontent.com/20153890/39241370-a04076fa-48c1-11e8-950b-614b63faae03.png)
 
 ###### Official Nodejs logo from nodejs.org ######
- 
+
+**NOTE**
+
+선행되어야 할 필수 요소 
+
+* [ES6](https://www.tutorialspoint.com/es6/index.html).
+
+* [Nodejs 기초](https://www.w3schools.com/nodejs/default.asp).
+
 
 ## TDD ##
 T Academy Node.JS 기반의 REST API Server개발에 대한 세미나를 듣고 따로 정리를 해보려 한다.
