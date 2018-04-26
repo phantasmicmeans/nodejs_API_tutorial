@@ -9,7 +9,7 @@ Nodejs Server API server 개발 1
 
 선행되어야 할 필수 요소 
 
-* [ES6](https://www.tutorialspoint.com/es6/index.html).
+* [ES6](https://www.tutorialspoint.com/es6/index.htm).
 
 * [Nodejs 기초](https://www.w3schools.com/nodejs/default.asp).
 
